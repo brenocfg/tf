@@ -50,8 +50,13 @@ function set_vars(){
     CPU2006=1
   fi
 
+  if [[ $(pwd) =~ "cpu2017" ]]; then
+    echo "Setting CPU2017=1"
+    CPU2017=1
+  fi
+
   # Common files used by comp.sh and instrument.sh
-  if [[ -n $CPU2006 && $CPU2006 -eq 1 ]]; then
+  if [[ -n $CPU2006 && $CPU2006 -eq 1 ]] || [[ -n $CPU2017 && $CPU2017 -eq 1 ]]; then
     if [[ $(uname -s) == "Linux" ]]; then
       rbc_name="$bench_name.linux"
     else

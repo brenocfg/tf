@@ -81,10 +81,18 @@ function cpu2006(){
   walk "${dirs[@]}"
 }
 
+function cpu2017(){
+  dirs=("500.perlbench_r/rbc" "502.gcc_r/rbc" "505.mcf_r/rbc" "508.namd_r/rbc" 
+        "510.parest_r/rbc" "511.povray_r/rbc" "519.lbm_r/rbc" "520.omnetpp_r/rbc"
+        "523.xalancbmk_r/rbc" "525.x264_r/rbc" "526.blender_r/rbc" "531.deepsjeng_r/rbc"
+        "538.imagick_r/rbc" "541.leela_r/rbc" "544.nab_r/rbc" "557.xz_r/rbc")
+  walk "${dirs[@]}"
+}
+
 benchs=( "ASC_Sequoia" "BenchmarkGame" "BitBench" "CoyoteBench" "DOE_ProxyApps_C" 
   "Dhrystone" "McGill" "MiBench" "Misc"  "Shootout" "Stanford" "Fhourstones" 
   "Linpack" "mediabench" "ASCI_Purple" "Fhourstones_31" "PolyBench"
   "SciMark2-C" "sim" "mafft" "tramp3d-v4" "llubenchmark" "nbench" "Ptrdist"
   "Trimaran" "TSVC" "PAQ8p" "NPB-serial" "VersaBench" "FreeBench" "cBench"
-  "MallocBench" "McCat" "Olden" "Prolangs-C" "cpu2006")
+  "MallocBench" "McCat" "Olden" "Prolangs-C" "cpu2006", "cpu2017")
 
