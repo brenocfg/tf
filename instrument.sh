@@ -3,7 +3,7 @@
 # this is left as an example 
 function compile() {
   
-  if [[ -n $CPU2006 && $CPU2006 -eq 1 ]]; then
+  if [[ -n $CPU2006 && $CPU2006 -eq 1 ]] || [[ -n $CPU2017 && $CPU2017 -eq 1 ]]; then
     # rbc -> lnk
     $LLVM_PATH/opt -S $rbc_name -o $lnk_name
   else
